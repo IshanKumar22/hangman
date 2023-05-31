@@ -33,6 +33,13 @@ class Game(object):
             self.turns -= 1
             if self.turns == 0:
                 self.gameover()
+
+    def __int__(self) -> int:
+        """
+            Returns the number of turns left
+        """
+
+        return self.turns
     
     def __str__(self) -> str:
         """
