@@ -28,7 +28,7 @@ class Game(object):
         """
 
         if letter in self.word:
-            guesses += letter
+            self.guesses += letter
         else:
             self.turns -= 1
             if self.turns == 0:
