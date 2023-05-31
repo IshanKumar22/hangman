@@ -21,7 +21,7 @@ class Game(object):
         self.guesses = []
         self.gameover = func
 
-    def guess(self, letter):
+    def guess(self, letter: str):
         """
             Record a guess.
             :param letter: The letter to be guessed.
