@@ -9,7 +9,25 @@ from PIL import ImageTk, Image
 from ttkbootstrap import dialogs
 from hangman import Game
 
-PATH = Path(__file__).parent / "guiAssets"
+
+def path():
+    """
+        Methon that returns the path where the assets are stored
+    """
+
+    try:
+        try:
+            from sys import _MEIPASS
+            return _MEIPASS
+        except ImportError:
+            from sys import _MEIPASS2
+            return _MEIPASS2
+    except ImportError:
+        from os.path import abspath
+        return abspath(".")
+
+
+PATH = Path(path()) / "guiAssets"
 
 root = ttk.Window(title="Hangman", themename="darkly", size=(600, 400))
 
