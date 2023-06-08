@@ -24,6 +24,15 @@ class Game(object):
         self.correct = correct_func
         self.update = update_func
 
+    def reset(self):
+        """
+            Reset the game.
+        """
+
+        self.word = random_word(5, 10)
+        self.turns = 6
+        self.guesses = []
+
     def guess(self, letter: str):
         """
             Record a guess.
