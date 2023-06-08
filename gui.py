@@ -75,7 +75,7 @@ def reset():
 
     game.reset()
     for letter, button in zip(lowercase, buttons):
-        root.bind(f"<KeyPress-{l}>", lambda _, letter=letter,
+        root.bind(f"<KeyPress-{letter}>", lambda _, letter=letter,
                   button=button: guessed(letter, button))
         button.configure(state="enabled")
     update()
